@@ -29,7 +29,7 @@ if len(profile_names) != 0:
         # We use a regular expression to only look for the absent cases so we can ignore them.
         if re.search("Security key           : Absent", profile_info):
             continue
-            else:
+        else:
             # Assign the ssid of the wifi profile to the dictionary
                 wifi_profile["ssid"] = name
             # These cases aren't absent and we should run them "key=clear" command part to get the password
